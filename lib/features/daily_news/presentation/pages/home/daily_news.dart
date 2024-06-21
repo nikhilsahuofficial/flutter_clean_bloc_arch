@@ -27,7 +27,8 @@ class DailyNews extends StatelessWidget {
       automaticallyImplyLeading: false,
       title: const Text(
         'Daily News',
-        style: TextStyle(color: Colors.black),
+
+        style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
       ),
       actions: [
         GestureDetector(

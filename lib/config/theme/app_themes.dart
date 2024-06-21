@@ -12,7 +12,7 @@ ThemeData theme() {
 /// Defines the AppBar theme for the application.
 AppBarTheme appBarTheme() {
   return const AppBarTheme(
-    color: Colors.teal,
+    color: Colors.amber,
     elevation: 0,
     centerTitle: true,
     iconTheme: IconThemeData(color: Color(0XFF8B8B8B)),
