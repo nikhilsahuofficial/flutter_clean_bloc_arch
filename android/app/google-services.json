@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067697200908",
+    "project_id": "flutter-clean-bloc-2a03d",
+    "storage_bucket": "flutter-clean-bloc-2a03d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067697200908:android:e7d4d6efe6ea3eb0b03329",
+        "android_client_info": {
+          "package_name": "com.flutter.clean.bloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZbd1LsTGylpxnTeM7AgPxsZsGgR-fNYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

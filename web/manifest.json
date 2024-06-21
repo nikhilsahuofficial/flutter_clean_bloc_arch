@@ -1,0 +1,35 @@
+{
+    "name": "flutter_clean_bloc_arch",
+    "short_name": "flutter_clean_bloc_arch",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A cross-platform Flutter application demonstrating clean architecture principles, using BLoC (Cubit) for state management, Firebase for authentication, analytics, and crash reporting. This project showcases a list and detail view integrated with a public API, designed to work seamlessly on both web and mobile platforms.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

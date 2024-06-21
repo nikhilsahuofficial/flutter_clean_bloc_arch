@@ -1,0 +1,100 @@
+name: flutter_clean_bloc_arch
+description: >
+  A cross-platform Flutter application demonstrating clean architecture principles,
+  using BLoC (Cubit) for state management, Firebase for authentication, analytics,
+  and crash reporting. This project showcases a list and detail view integrated
+  with a public API, designed to work seamlessly on both web and mobile platforms.
+
+# This application is not published to pub.dev
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The current version of the application
+version: 1.0.0+1
+
+# The environment for the Dart SDK
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+# Dependencies required for the application
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Cupertino icons specific to iOS
+  cupertino_icons: ^1.0.6
+
+  # Firebase core functionalities
+  firebase_core: ^3.1.0
+
+  # Firebase Authentication using email and password
+  firebase_auth: ^5.1.0
+
+  # Firebase Analytics for app usage insights
+  firebase_analytics: ^11.0.1
+
+  # Firebase Crashlytics for crash reporting
+  firebase_crashlytics: ^4.0.1
+
+  # Service loader for dependency injection
+  get_it: ^7.7.0
+
+  # State management using BLoC pattern
+  flutter_bloc: ^8.1.6
+
+  # Networking library for API calls
+  dio: ^5.4.3+1
+
+  # For value equality
+  equatable: ^2.0.5
+
+  # Environment configuration
+  flutter_dotenv: ^5.1.0
+
+  # For caching network images
+  cached_network_image: ^3.3.1
+
+  # Flutter hooks for functional component-style code
+  flutter_hooks: ^0.20.5
+
+  # Routing
+  auto_route: ^7.8.4
+
+  # Networking with Retrofit
+  retrofit: ^4.0.3
+
+  # Icon library
+  ionicons: ^0.2.2
+
+# Development dependencies
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generation for Retrofit
+  retrofit_generator: ^8.0.4
+
+  # Code generation for various purposes
+  build_runner: ^2.4.6
+
+  # Linting rules for Flutter projects
+  flutter_lints: ^3.0.0
+
+# Flutter-specific configurations
+flutter:
+  uses-material-design: true # Use material design icons
+
+  # Assets used in the application
+  assets:
+    - .env
+    - assets/images/flat-design-no-photo-sign.png
+    - assets/images/innovecture-logo-website.png
+
+  # Fonts used in the application
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Black.ttf
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+          weight: 300
