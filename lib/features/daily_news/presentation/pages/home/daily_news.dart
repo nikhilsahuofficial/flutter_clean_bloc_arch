@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +22,38 @@ class DailyNews extends StatelessWidget {
     );
   }
 
+
+// Function to show an alert dialog
+  void showLogoutDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Logout"),
+          content: const Text("Are you sure you want to logout?"),
+          actions: <Widget>[
+            TextButton(
+              child: const Text("Cancel"),
+              onPressed: () {
+                Navigator.of(context).pop(); // Dismiss the dialog
+              },
+            ),
+            TextButton(
+              child: const Text("Logout"),
+              onPressed: () async {
+                // Perform logout functionality
+                await FirebaseAuth.instance.signOut();
+                Navigator.of(context).pop(); // Dismiss the dialog
+                Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   /// Builds the app bar for the DailyNews screen.
   _buildAppbar(BuildContext context) {
     return AppBar(
@@ -32,9 +65,10 @@ class DailyNews extends StatelessWidget {
       ),
       actions: [
         GestureDetector(
-          onTap: () {
+          onTap: ()  {
             // Trigger logout functionality via AuthBloc
-            context.read<AuthBloc>().add(AuthLogoutRequested());
+            // Show the logout confirmation dialog
+            showLogoutDialog(context);
           },
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 14),

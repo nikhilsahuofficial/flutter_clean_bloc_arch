@@ -1,9 +1,11 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -33,7 +35,24 @@ Future<void> main() async {
 
   try {
     // Initialize Firebase
-    await Firebase.initializeApp();
+    if (kIsWeb) {
+      await Firebase.initializeApp(
+          options: const FirebaseOptions(
+              apiKey: "AIzaSyBs9woRzPVa_dSCzgX3A0ZE87nJcjRHOTw",
+              appId: "1:1067697200908:web:eb91f641611fda36b03329",
+              messagingSenderId: "1067697200908",
+              authDomain: 'flutter-clean-bloc-2a03d.firebaseapp.com',
+              projectId: "flutter-clean-bloc-2a03d"));
+    } else if (Platform.isAndroid) {
+      await Firebase.initializeApp(
+          options: const FirebaseOptions(
+              apiKey: "AIzaSyCZbd1LsTGylpxnTeM7AgPxsZsGgR-fNYk",
+              appId: "1:1067697200908:android:e7d4d6efe6ea3eb0b03329",
+              projectId: "flutter-clean-bloc-2a03d",
+              messagingSenderId: ''));
+    } else {
+      await Firebase.initializeApp();
+    }
 
     // Configure Flutter error handling with Firebase Crashlytics
     const fatalError = true; // Set to true to treat errors as fatal
@@ -92,7 +111,7 @@ class MyApp extends StatelessWidget {
             if (state is AuthLoading) {
               return SplashScreen(); // Show splash screen while checking authentication
             } else if (state is AuthAuthenticated) {
-              return DailyNews(); // Navigate to home screen if authenticated
+              return const DailyNews(); // Navigate to home screen if authenticated
             } else {
               return LoginScreen(); // Show login screen if not authenticated
             }
