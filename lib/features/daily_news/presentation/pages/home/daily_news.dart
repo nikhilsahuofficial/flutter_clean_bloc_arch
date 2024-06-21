@@ -59,12 +59,12 @@ class DailyNews extends StatelessWidget {
           return ListView.builder(
             itemBuilder: (context, index) {
               return ArticleWidget(
-                article: state.articles![index],
+                article: state.articles[index],
                 onArticlePressed: (article) =>
                     _onArticlePressed(context, article),
               );
             },
-            itemCount: state.articles!.length,
+            itemCount: state.articles.length,
           );
         }
         return const SizedBox();
