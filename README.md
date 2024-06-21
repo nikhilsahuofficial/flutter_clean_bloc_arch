@@ -87,3 +87,11 @@ Comprehensive unit tests validate business logic, including use cases, Blocs, an
    ```bash
    flutter run
    
+
+
+### TEST CREDENTIALS
+- Email - test1@gmail.com
+- Password - 12345678
+
+- Email - test2@gmail.com
+- Password - 87654321
