@@ -134,13 +134,17 @@ class LoginScreen extends StatelessWidget {
                   ));
             },
             style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.amber,
               padding: const EdgeInsets.symmetric(vertical: 16),
               textStyle: const TextStyle(fontSize: 18),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            child: const Text('Login'),
+            child: const Text('Login',style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color:Colors.black
+            ),),
           ),
         );
       },
